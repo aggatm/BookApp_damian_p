@@ -16,6 +16,8 @@ WORKDIR /app/backend
 
 RUN npm install
 
+RUN npx prisma generate
+
 WORKDIR /app
 
 CMD ["npm", "run", "dev"]
