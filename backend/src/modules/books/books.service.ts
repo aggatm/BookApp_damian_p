@@ -77,11 +77,13 @@ export class BooksService implements OnModuleInit {
         {
           title: {
             contains: searchBookDto.searchString,
+            mode: 'insensitive',
           },
         },
         {
           author: {
             contains: searchBookDto.searchString,
+            mode: 'insensitive',
           },
         },
       ];
