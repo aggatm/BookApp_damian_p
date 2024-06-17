@@ -6,7 +6,7 @@
     "dev": "concurrently \"cd frontend && npm run dev\" \"cd backend && npm run start:dev\"",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "start:test": "concurrently 'npm run start:docker' 'sleep 15 && npm run cypress:run' 'sleep 20 && npm run stop:docker'",
+    "start:test": "concurrently 'npm run start:docker' 'sleep 10 && npm run cypress:run' 'sleep 40 && npm run stop:docker'",
     "start:docker": "docker compose up",
     "stop:docker": "docker compose down"
   },
