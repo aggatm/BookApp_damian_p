@@ -24,7 +24,7 @@ export const Pagination = ({
   );
 
   return (
-    <BootstrapPagination>
+    <BootstrapPagination data-testid="pagination">
       <BootstrapPagination.Prev onClick={goToPreviousPage} />
       <BootstrapPagination.Item onClick={goToFirst} active={page === 1}>
         {1}

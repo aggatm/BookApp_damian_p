@@ -13,6 +13,7 @@ export const BooksSearchInput = () => {
       value={searchString}
       onChange={handleValue}
       placeholder="Search by Title or Author"
+      data-testid="search-input"
     />
   );
 };

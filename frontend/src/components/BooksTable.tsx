@@ -10,7 +10,7 @@ interface Props {
 
 const BooksTable = ({ books = [], goToDetails }: Props) => {
   return (
-    <Table bordered striped>
+    <Table bordered striped data-testid="books-list">
       <thead>
         <tr>
           <th>Title</th>
@@ -21,12 +21,16 @@ const BooksTable = ({ books = [], goToDetails }: Props) => {
       </thead>
       <tbody>
         {books.map((book) => (
-          <tr key={book.id}>
+          <tr key={book.id} data-testid="books-list-row">
             <td>{upperFirst(book.title)}</td>
             <td>{capitalizeAllWords(book.author)}</td>
             <td>{book.isbn}</td>
             <td>
-              <Button size="sm" onClick={() => goToDetails(book.id)}>
+              <Button
+                size="sm"
+                onClick={() => goToDetails(book.id)}
+                data-testid="show-details"
+              >
                 Show details
               </Button>
             </td>
